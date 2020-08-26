@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#325C74">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#325C74"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#325C74"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:visibility="visible"
+            android:id="@+id/IdentificationData">
+            <EditText
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:hint="Lesson Name"
+                android:layout_height="wrap_content"
+                android:id="@+id/LessonNameET"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:text="Lesson Type: "
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/ChosenType" />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TypeSB"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:max="2" />
+            <EditText
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/SemesterET"
+                android:numeric="integer"
+                android:hint="Semester (Integers only)"
+                android:maxLength="2" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/AddLessonFragment_ClassroomET"
+                android:hint="Classroom e.g. A1" />
+            <Switch
+                android:layout_marginLeft="20dp"
+                android:text="Per 2 Weeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Per2WeeksSW"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#325C74"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/DateData"
+            android:visibility="gone">
+            <TextView
+                android:text="Pick Lesson's Date"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20dp" />
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DayDP"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:minWidth="25px"
+                android:minHeight="25px" />
+            <Switch
+                android:text="Postponed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/PostponedSw"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:text="Postponed For:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textSize="20dp"
+                android:id="@+id/PostponedForTV" />
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PostponedForDP"
+                android:visibility="gone"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:minWidth="25px"
+                android:minHeight="25px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#325C74"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/TimeData"
+            android:visibility="gone">
+            <TextView
+                android:text="Time input"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/BegginingHourET"
+                android:hint="Beggining Hour - e.g. 10:00"
+                android:numeric="integer"
+                android:maxLength="5"
+                android:inputType="time" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/EndingHourET"
+                android:layout_marginTop="10dp"
+                android:hint="Ending Hour - e.g. 14:00"
+                android:inputType="time"
+                android:maxLength="5"
+                android:numeric="integer" />
+            <TextView
+                android:text="Postpone Time input"
+                android:textSize="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:id="@+id/AddLesson_PostponedTimeTextOutput"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/AddLesson_PostponedBegginingHourET"
+                android:hint="Beggining Hour - e.g. 10:00"
+                android:numeric="integer"
+                android:maxLength="5"
+                android:inputType="time" />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/AddLesson_PostponedEndingHourET"
+                android:layout_marginTop="10dp"
+                android:hint="Ending Hour - e.g. 14:00"
+                android:inputType="time"
+                android:maxLength="5"
+                android:numeric="integer" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/AddLessonFragment_KeyboardSelection"
+                android:src="@drawable/numerickeyboard"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+            <Button
+                android:text="Previous"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/PreviousButton" />
+            <Button
+                android:text="Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/NextButton" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

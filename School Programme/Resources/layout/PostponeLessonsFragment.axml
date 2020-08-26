@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#325C74">
+<!--list view section-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/ListViewPostponeLL">
+        <Button
+            android:text="Sort By"
+            android:id="@+id/SortButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center" />
+        <TextView
+            android:text="Tap and hold an item to postpone, update or remove it's postpone status..."
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <ListView
+            android:id="@+id/PostponeListView"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+<!--Modify-Remove-Add postpone status-->
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/PostponeScrollViewHolder"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#325C74">
+    <!--Root-->
+    <!--Case already postponed-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--Update postpone status-->
+        <!--Or-->
+        <!--Case not postponed at all-->
+        <!--Different Setup-->
+            <TextView
+                android:text="Update Postpone Status of "
+                android:id="@+id/LabelStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textSize="20dp" />
+            <TextView
+                android:text="Choose a new date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="15dp" />
+            <DatePicker
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PostponePostponedDP"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:minWidth="25px"
+                android:minHeight="25px" />
+            <Switch
+                android:text="Postpone Time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PostponeTimePSSW"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/PostponeTimePSLL"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/PostponeBegginingHourET"
+                    android:hint="Beggining Hour - e.g. 10:00"
+                    android:numeric="integer"
+                    android:maxLength="5"
+                    android:inputType="time" />
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/PostponeEndingHourET"
+                    android:layout_marginTop="10dp"
+                    android:hint="Ending Hour - e.g. 14:00"
+                    android:inputType="time"
+                    android:maxLength="5"
+                    android:numeric="integer" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/PostponeLessonsFragment_KeyboardSelection"
+                    android:src="@drawable/numerickeyboard"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+                <Button
+                    android:text="Submit Changes"
+                    android:id="@+id/SubmitUpdatesPBtn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true" />
+                <Button
+                    android:text="Back"
+                    android:id="@+id/PostponeFrag_BackBtn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    layout_alignParentLeft="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

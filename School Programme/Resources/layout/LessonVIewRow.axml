@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/LessonNameView"
+        android:text="Lesson: "
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/TypeView"
+        android:text="Type: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/DayView"
+        android:text="Day: "
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/BeggingHourView"
+        android:text="Starting at: "
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/EndingHourView"
+        android:text="Ending at: "
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/SemesterView"
+        android:text="Semester: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/Per2WeeksView"
+        android:text="Per 2 Weeks: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/ClassroomView"
+        android:text="Classroom: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/PostponedAdapterTV"
+        android:text="Postponed: "
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/PostponedForAdapterTV"
+        android:text="Postponed For: "
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/PostponedStartingHourAdapterTV"
+        android:text="Postponed Ending Hour: "
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/PostponedEndingHourAdapterTV"
+        android:text="Postponed Starting Hour: "
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp" />
+</LinearLayout>
