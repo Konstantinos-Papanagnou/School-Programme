@@ -57,7 +57,7 @@ namespace School_Programme
             about.Click += (sender, e) => 
             {
                 AlertDialog.Builder confirmation = new AlertDialog.Builder(this);
-                confirmation.SetMessage("School Programme v1.2\n\nSchool Programme is designed to help you organize your lessons weekly and/or per 2 weeks. The lessons' dates will be updated automatically each time you start the application.\n\nPowered By Pap Industries.\nDeveloper Konstantinos Pap.\nFor any technical issues contact me at konstantinos_gr1@yahoo.com\n\nCopyrights © Konstantinos Pap 2019.");
+                confirmation.SetMessage("School Programme v1.2\n\nSchool Programme is designed to help you organize your lessons weekly and/or per 2 weeks. The lessons' dates will be updated automatically each time you start the application.\n\nPowered By Pap Industries.\nDeveloper Konstantinos Pap.\nFor any technical issues contact me at papindustries@gmail.com\n\nCopyrights © Konstantinos Pap 2019.");
                 confirmation.SetTitle("Information");
                 confirmation.SetIcon(Resource.Drawable.About48);
                 confirmation.Show();
